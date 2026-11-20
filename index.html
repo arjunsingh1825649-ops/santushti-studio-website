@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santushti Studio By Reet | Udhampur</title>
+<meta name="description" content="Santushti Studio By Reet - Bridal Makeup, Hair, Skin Care and Beauty Services in Udhampur.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{--purple:#a66bd0;--light:#d4b1f0;--silver:#ded9e6;--dark:#0b0812;--panel:#191222}
+body{font-family:Arial,sans-serif;background:var(--dark);color:white;line-height:1.6}
+header{background:#100b1b;border-bottom:1px solid #49305d;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;position:sticky;top:0;z-index:99}
+.logo{font-size:21px;font-weight:bold;color:var(--light);letter-spacing:1px}
+.logo span{display:block;color:var(--silver);font-size:10px;letter-spacing:4px}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+nav a{font-size:12px;color:#eee;text-decoration:none}
+nav a:hover{color:var(--light)}
+.hero{padding:65px 7%;min-height:510px;display:flex;align-items:center;gap:35px;background:linear-gradient(120deg,#100b1b,#281638)}
+.hero-content{flex:1}
+.tag{color:var(--light);letter-spacing:3px;font-size:12px}
+.hero h1{font-size:clamp(38px,6vw,65px);line-height:1.15;margin:18px 0}
+.hero h1 span{color:var(--light)}
+.hero p{color:#ccc;margin-bottom:25px;max-width:500px}
+.hero-photo{flex:1;min-width:0;background:#100b1b;border:1px solid #684184;border-radius:15px;padding:10px;display:flex;justify-content:center}
+.hero-photo img{width:100%;height:380px;object-fit:contain}
+.btn{display:inline-block;padding:12px 22px;border-radius:30px;background:linear-gradient(120deg,#8844b0,#bd91dc);color:white;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+.btn-outline{background:transparent;border:1px solid var(--light);margin-left:8px}
+section{padding:65px 7%}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title small{color:var(--light);letter-spacing:3px}
+.section-title h2{font-size:32px;color:var(--silver);margin-top:7px}
+.section-title p{color:#aaa;margin-top:7px}
+.services,.gallery,.contact{background:#100b1b}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--panel);border:1px solid #49305d;border-radius:14px;padding:25px;text-align:center}
+.card h3{color:var(--light);margin-bottom:10px}
+.card p{color:#ccc;font-size:14px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about-image{height:370px;background:#100b1b;border:1px solid #684184;border-radius:14px;padding:10px}
+.about-image img{width:100%;height:100%;object-fit:contain}
+.rating{text-align:center;background:linear-gradient(120deg,#1b1028,#100b1b)}
+.stars{font-size:30px;color:#ffca55;letter-spacing:5px}
+.rating-number{font-size:45px;color:var(--light);font-weight:bold}
+.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.price-card{background:var(--panel);border:1px solid #49305d;border-radius:14px;padding:22px}
+.price-card h3{color:var(--light);font-size:21px;margin-bottom:12px}
+.price-row{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #39264c;font-size:13px;color:#e4dfea}
+.price-row strong{color:var(--silver);white-space:nowrap}
+.note{font-size:12px;color:#aaa;margin-top:15px}
+.bridal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.bridal-card{background:var(--panel);border:1px solid #684184;border-radius:13px;padding:20px 12px;text-align:center}
+.bridal-card h3{color:var(--light)}
+.bridal-card strong{display:block;font-size:25px;color:var(--silver);margin:10px}
+.bridal-card p{font-size:12px;color:#ccc}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.gallery-grid img{width:100%;height:270px;object-fit:contain;background:#1c1328;border:1px solid #49305d;border-radius:12px;padding:5px}
+.booking{background:linear-gradient(145deg,#1b1028,#0b0812)}
+.booking-box{max-width:620px;margin:auto;background:var(--panel);padding:25px;border:1px solid #684184;border-radius:14px}
+.booking-box input,.booking-box select,.booking-box textarea{width:100%;padding:13px;margin-bottom:13px;background:#0b0812;border:1px solid #49305d;border-radius:8px;color:white}
+.booking-box textarea{min-height:90px;resize:vertical}
+.booking-box button{width:100%}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.contact-card{background:var(--panel);border:1px solid #49305d;border-radius:12px;padding:22px;text-align:center}
+.contact-card h3{color:var(--light);margin:8px 0}
+.contact-card p,.contact-card a{color:#ccc;font-size:13px}
+.contact-card a{color:var(--light);text-decoration:none}
+.hours{max-width:620px;margin:30px auto;background:var(--panel);border:1px solid #49305d;border-radius:12px;padding:22px}
+.hours h3{text-align:center;color:var(--light);margin-bottom:12px}
+.hour-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #49305d;font-size:13px}
+.closed{color:#ff9999}
+footer{text-align:center;background:#08060e;padding:28px 15px;border-top:1px solid #39264c}
+footer h3{color:var(--light);letter-spacing:2px}
+footer p{color:#aaa;font-size:13px;margin-top:7px}
+@media(max-width:750px){
+ header{justify-content:center}
+ nav{justify-content:center}
+ .hero{flex-direction:column}
+ .hero-content{width:100%}
+ .hero-photo{width:100%}
+ .hero-photo img{height:300px}
+ .about{grid-template-columns:1fr}
+ .service-grid,.contact-grid{grid-template-columns:1fr 1fr}
+ .gallery-grid{grid-template-columns:1fr 1fr}
+ .bridal-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:500px){
+ .price-grid,.service-grid,.contact-grid,.gallery-grid{grid-template-columns:1fr}
+ .hero h1{font-size:42px}
+ .gallery-grid img{height:280px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">SANTUSHTI STUDIO<span>BY REET</span></div>
+ <nav>
+  <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#prices">Prices</a><a href="#bridal">Bridal</a><a href="#gallery">Gallery</a><a href="#booking">Booking</a><a href="#contact">Contact</a>
+ </nav>
+</header>
+
+<section class="hero" id="home">
+ <div class="hero-content">
+  <div class="tag">WELCOME TO SANTUSHTI STUDIO</div>
+  <h1>Your Beauty.<br><span>Your Confidence.</span></h1>
+  <p>Discover your beauty with Santushti Studio By Reet. Your destination for beauty, care and confidence in Udhampur.</p>
+  <a href="#booking" class="btn">Book Appointment</a>
+  <a href="#services" class="btn btn-outline">Explore Services</a>
+ </div>
+ <div class="hero-photo"><img src="Screenshot_20261115-195345~2.jpg" alt="Santushti Studio"></div>
+</section>
+
+<section class="services" id="services">
+ <div class="section-title"><small>WHAT WE OFFER</small><h2>Our Services</h2><p>Beauty and care services for your special moments.</p></div>
+ <div class="service-grid">
+  <div class="card"><h3>💄 Bridal & Makeup</h3><p>Bridal, reception, engagement, party and groom makeup.</p></div>
+  <div class="card"><h3>✨ Skin Care</h3><p>Facials, Hydra Facial, clean-up, bleach and D-Tan treatments.</p></div>
+  <div class="card"><h3>💇 Hair Services</h3><p>Haircut, styling, hair spa, smoothening, keratin and colour.</p></div>
+  <div class="card"><h3>💅 Manicure & Pedicure</h3><p>Lotus, Aroma, Spa, O3+ and other nail care treatments.</p></div>
+  <div class="card"><h3>🌸 Beauty Services</h3><p>Waxing, threading and personal grooming.</p></div>
+  <div class="card"><h3>✂️ Men's Grooming</h3><p>Haircuts, beard, hair spa and grooming treatments.</p></div>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="about-image"><img src="Screenshot_20261115-195355~2.jpg" alt="Santushti Studio By Reet"></div>
+ <div>
+  <div class="tag">ABOUT OUR STUDIO</div>
+  <h2>Welcome to Santushti Studio By Reet</h2>
+  <p>At Santushti Studio By Reet, beauty meets confidence. We aim to provide a welcoming space where you can enjoy beauty and personal care services.</p>
+  <p>From special bridal moments to everyday grooming, explore our beauty and styling services.</p>
+  <a href="#contact" class="btn">Visit Our Studio</a>
+ </div>
+</section>
+
+<section class="rating">
+ <div class="section-title"><small>CUSTOMER FEEDBACK</small><h2>Google Reviews</h2></div>
+ <div class="stars">★★★★★</div><div class="rating-number">4.9/5</div>
+ <p>Based on 607 Google reviews</p>
+ <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Santushti+Studio+By+Reet+Udhampur" target="_blank" rel="noopener">View Google Reviews</a>
+</section>
+
+<section id="prices">
+ <div class="section-title"><small>OUR TREATMENTS & PRICING</small><h2>Service Price List</h2><p>Explore our selected services and listed prices.</p></div>
+ <div class="price-grid">
+  <div class="price-card"><h3>Makeup Services</h3>
+   <div class="price-row"><span>Bridal – Non HD</span><strong>₹8,000</strong></div><div class="price-row"><span>Bridal – HD</span><strong>₹13,000</strong></div>
+   <div class="price-row"><span>Reception – Non HD</span><strong>₹8,000</strong></div><div class="price-row"><span>Reception – HD</span><strong>₹13,000</strong></div>
+   <div class="price-row"><span>Engagement – Non HD</span><strong>₹5,000</strong></div><div class="price-row"><span>Engagement – HD</span><strong>₹7,000</strong></div>
+   <div class="price-row"><span>Party – Non HD</span><strong>₹2,500</strong></div><div class="price-row"><span>Party – HD</span><strong>₹3,500</strong></div>
+  </div>
+  <div class="price-card"><h3>Advanced Makeup</h3>
+   <div class="price-row"><span>Bridal – HD</span><strong>₹20,000</strong></div><div class="price-row"><span>Bridal – HD Pro</span><strong>₹25,000</strong></div><div class="price-row"><span>Bridal – Airbrush / Signature</span><strong>₹30,000</strong></div>
+   <div class="price-row"><span>Reception – HD</span><strong>₹20,000</strong></div><div class="price-row"><span>Reception – HD Pro</span><strong>₹25,000</strong></div><div class="price-row"><span>Reception – Airbrush / Signature</span><strong>₹30,000</strong></div>
+   <div class="price-row"><span>Engagement – HD</span><strong>₹10,000</strong></div><div class="price-row"><span>Engagement – HD Pro</span><strong>₹15,000</strong></div><div class="price-row"><span>Engagement – Airbrush / Signature</span><strong>₹20,000</strong></div>
+   <div class="price-row"><span>Party – Simple</span><strong>₹5,500</strong></div><div class="price-row"><span>Party – HD</span><strong>₹13,000</strong></div><div class="price-row"><span>Party – Airbrush / Signature</span><strong>₹15,000</strong></div>
+   <div class="price-row"><span>Groom – HD</span><strong>₹2,100</strong></div><div class="price-row"><span>Groom – HD Pro</span><strong>₹5,100</strong></div><div class="price-row"><span>Groom – Airbrush / Signature</span><strong>₹11,000</strong></div>
+  </div>
+  <div class="price-card"><h3>Hair Services & Spa</h3>
+   <div class="price-row"><span>Head Wash + Styling</span><strong>₹100</strong></div><div class="price-row"><span>Beard</span><strong>₹100</strong></div><div class="price-row"><span>Treatment Hair Wash</span><strong>₹200</strong></div><div class="price-row"><span>Haircut</span><strong>₹200</strong></div><div class="price-row"><span>Haircut + Beard</span><strong>₹300</strong></div>
+   <div class="price-row"><span>L'Oréal Hair Spa</span><strong>₹500</strong></div><div class="price-row"><span>Iluvia Detox</span><strong>₹900</strong></div><div class="price-row"><span>Shea Retention</span><strong>₹1,000</strong></div>
+  </div>
+  <div class="price-card"><h3>Hair Treatments & Colour</h3>
+   <div class="price-row"><span>Smoothening – Matrix</span><strong>₹500</strong></div><div class="price-row"><span>Smoothening – L'Oréal</span><strong>₹900</strong></div><div class="price-row"><span>Smoothening – Schwarzkopf</span><strong>₹1,000</strong></div><div class="price-row"><span>Smoothening – Puming</span><strong>₹1,200</strong></div>
+   <div class="price-row"><span>Keratin / Botox – HYRO</span><strong>₹2,000</strong></div><div class="price-row"><span>Keratin / Botox – Cadiveu</span><strong>₹2,500</strong></div><div class="price-row"><span>Keratin / Botox – K9</span><strong>₹3,000</strong></div>
+   <div class="price-row"><span>Global Basic Colour</span><strong>₹1,500</strong></div><div class="price-row"><span>Global Fashion Shade</span><strong>₹2,500</strong></div><div class="price-row"><span>Highlights</span><strong>₹2,500</strong></div>
+  </div>
+  <div class="price-card"><h3>Skin Care & Facials</h3>
+   <div class="price-row"><span>Face Bleach</span><strong>₹250</strong></div><div class="price-row"><span>Face Clean Up</span><strong>₹400</strong></div><div class="price-row"><span>Basic Facial</span><strong>₹1,000</strong></div><div class="price-row"><span>Hydra Facial</span><strong>₹2,000</strong></div><div class="price-row"><span>O3+ Facial</span><strong>₹1,500</strong></div><div class="price-row"><span>Face D-Tan O3+</span><strong>₹499</strong></div><div class="price-row"><span>Face D-Tan Lotus</span><strong>₹299</strong></div><div class="price-row"><span>Face D-Tan Ozone+3</span><strong>₹399</strong></div>
+  </div>
+  <div class="price-card"><h3>Beauty Work</h3>
+   <div class="price-row"><span>Forehead Wax</span><strong>₹40</strong></div><div class="price-row"><span>Forehead Threading</span><strong>₹20</strong></div><div class="price-row"><span>Neck Wax</span><strong>₹100</strong></div><div class="price-row"><span>Neck Threading</span><strong>₹80</strong></div><div class="price-row"><span>Eyebrow Wax</span><strong>₹100</strong></div><div class="price-row"><span>Eyebrow Threading</span><strong>₹70</strong></div><div class="price-row"><span>Full Face Wax / Threading</span><strong>₹300</strong></div>
+  </div>
+  <div class="price-card"><h3>Manicure</h3>
+   <div class="price-row"><span>Lotus</span><strong>₹400</strong></div><div class="price-row"><span>Aroma</span><strong>₹500</strong></div><div class="price-row"><span>O3+</span><strong>₹600</strong></div><div class="price-row"><span>Spa</span><strong>₹700</strong></div><div class="price-row"><span>Paraffin</span><strong>₹1,000</strong></div><div class="price-row"><span>Chocolate</span><strong>₹1,500</strong></div><div class="price-row"><span>Ice Cream</span><strong>₹1,500</strong></div>
+  </div>
+  <div class="price-card"><h3>Pedicure</h3>
+   <div class="price-row"><span>Lotus</span><strong>₹600</strong></div><div class="price-row"><span>Aroma</span><strong>₹700</strong></div><div class="price-row"><span>Spa</span><strong>₹800</strong></div><div class="price-row"><span>O3+</span><strong>₹900</strong></div><div class="price-row"><span>Paraffin</span><strong>₹1,000</strong></div><div class="price-row"><span>Chocolate</span><strong>₹1,500</strong></div><div class="price-row"><span>Ice Cream</span><strong>₹1,500</strong></div>
+  </div>
+ </div>
+ <p class="note">Prices are based on the price lists supplied by the studio. Please confirm final service details and prices with the studio before booking.</p>
+</section>
+
+<section id="bridal">
+ <div class="section-title"><small>YOUR SPECIAL DAY</small><h2>Bridal Packages</h2><p>Special packages for your memorable celebrations.</p></div>
+ <div class="bridal-grid">
+  <div class="bridal-card"><h3>Classic</h3><strong>₹25,000</strong><p>HD Makeup<br>2 Aroma Facials<br>1 Bleach<br>Full Leg Wax<br>Full Arm + U Arm Wax<br>Threading<br>Manicure / Pedicure</p></div>
+  <div class="bridal-card"><h3>Premium</h3><strong>₹30,000</strong><p>HD Makeup<br>2 Lotus Facials<br>Full Body Wax<br>Lotus Mani-Pedi<br>Threading<br>Nail Extension & Art<br>Face Bleach</p></div>
+  <div class="bridal-card"><h3>Luxury</h3><strong>₹35,000</strong><p>HD Pro Makeup<br>2 Aroma Facials<br>Full Body Wax<br>Aroma Mani-Pedi<br>2 Face Bleach<br>Nail Extension<br>Hair Spa</p></div>
+  <div class="bridal-card"><h3>Signature</h3><strong>₹40,000</strong><p>HD Pro Makeup<br>3 O3+ Facials<br>2 O3+ Face Bleach<br>Full Body Wax<br>Body Spa<br>Haldi / Mehndi Makeup<br>Nail Extension & Art</p></div>
+ </div>
+ <p style="text-align:center;color:#bbb;margin-top:22px">₹50,000 Package: Bridal Makeup, Reception Makeup, Grooming Makeup and Mother / Mother-in-law Makeup.</p>
+</section>
+
+<section class="gallery" id="gallery">
+ <div class="section-title"><small>OUR WORK</small><h2>Our Gallery</h2><p>A glimpse of Santushti Studio.</p></div>
+ <div class="gallery-grid">
+  <img src="Screenshot_20261115-195345~2.jpg" alt="Studio gallery photo 1">
+  <img src="Screenshot_20261115-195355~2.jpg" alt="Studio gallery photo 2">
+  <img src="Screenshot_20261115-195611~2.jpg" alt="Studio gallery photo 3">
+  <img src="Screenshot_20261115-195650~2.jpg" alt="Studio gallery photo 4">
+  <img src="Screenshot_20261115-195755~2.jpg" alt="Studio gallery photo 5">
+  <img src="Screenshot_20261115-200108~2.jpg" alt="Studio gallery photo 6">
+  <img src="Screenshot_20261115-200142~2.jpg" alt="Studio gallery photo 7">
+ </div>
+</section>
+
+<section class="booking" id="booking">
+ <div class="section-title"><small>GET IN TOUCH</small><h2>Book an Appointment</h2><p>Send your appointment enquiry directly on WhatsApp.</p></div>
+ <div class="booking-box">
+  <form id="bookingForm">
+   <input type="text" id="name" placeholder="Your Full Name" required>
+   <input type="tel" id="phone" placeholder="Your 10-digit Phone Number" required pattern="[0-9]{10}" maxlength="10">
+   <select id="service" required>
+    <option value="">Select a Service</option>
+    <option>Bridal Makeup</option><option>Reception Makeup</option><option>Engagement Makeup</option><option>Party Makeup</option><option>Bridal Package</option><option>Hair Services</option><option>Hair Treatments</option><option>Skin Care & Facials</option><option>Manicure / Pedicure</option><option>Men's Grooming</option><option>Other Enquiry</option>
+   </select>
+   <input type="date" id="date" required>
+   <textarea id="message" placeholder="Your Message (Optional)"></textarea>
+   <button type="submit" class="btn">Send Enquiry on WhatsApp</button>
+  </form>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="section-title"><small>FIND US</small><h2>Contact Us</h2><p>We would love to hear from you.</p></div>
+ <div class="contact-grid">
+  <div class="contact-card"><div style="font-size:28px">📍</div><h3>Our Location</h3><p>2nd Floor, K N Tower, Opposite YES Bank, Shiv Nagar, Udhampur, J&K 182101</p></div>
+  <div class="contact-card"><div style="font-size:28px">📞</div><h3>Call Us</h3><p><a href="tel:+919596647898">095966 47898</a></p></div>
+  <div class="contact-card"><div style="font-size:28px">📸</div><h3>Instagram</h3><p><a href="https://www.instagram.com/santushtibyreet/" target="_blank" rel="noopener">@santushtibyreet</a></p></div>
+ </div>
+ <div style="text-align:center;margin-top:28px">
+  <a href="https://wa.me/919596647898" target="_blank" rel="noopener" class="btn">WhatsApp Us</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Santushti+Studio+By+Reet+Udhampur" target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
+ </div>
+ <div style="text-align:center;color:#ccc;margin-top:25px">
+  <p><strong style="color:var(--light)">Pick-up Service</strong></p>
+  <p>Available Sunday to Saturday, 9:00 AM – 5:00 PM.</p>
+ </div>
+ <div class="hours">
+  <h3>Opening Hours</h3>
+  <div class="hour-row"><span>Monday</span><span>10:00 AM – 8:00 PM</span></div>
+  <div class="hour-row"><span>Tuesday</span><span class="closed">Closed</span></div>
+  <div class="hour-row"><span>Wednesday</span><span>10:00 AM – 8:00 PM</span></div>
+  <div class="hour-row"><span>Thursday</span><span>10:00 AM – 8:00 PM</span></div>
+  <div class="hour-row"><span>Friday</span><span>10:00 AM – 8:00 PM</span></div>
+  <div class="hour-row"><span>Saturday</span><span>10:00 AM – 8:00 PM</span></div>
+  <div class="hour-row"><span>Sunday</span><span>10:00 AM – 8:00 PM</span></div>
+ </div>
+</section>
+
+<footer>
+ <h3>SANTUSHTI STUDIO BY REET</h3>
+ <p>Beauty • Care • Confidence</p>
+ <p>Designed by <strong>ZENTIX DIGI
